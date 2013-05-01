@@ -7,7 +7,8 @@
 using std::cout;
 using std::cin;
 
-int fibonacci(int it) {
+int fibonacci(int it)
+{
   /* Define the Nth Fibonacci number as the result of the binet formula
      with the iterator as the argument */
   float  fn = ( pow(PHI, it) - pow(-PHI, -it) ) / pow(5, 0.5);
@@ -16,17 +17,16 @@ int fibonacci(int it) {
   return 0;
 }
 
-int main() {
+int main()
+{
   // Start at the first number
-  int it = 1;
   int limit;
   cout << "How many numbers would you like to view? ";
   cin >> limit;
-  while (it <= limit) {
+  for (int it = 1; it <= limit; it++)
+  {
     // Call the Fibonacci function
     fibonacci(it);
-    // Progress the iterator.
-    ++it;  
   }
   return 0;
 }
