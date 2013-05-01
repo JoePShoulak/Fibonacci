@@ -1,17 +1,18 @@
 #include <iostream>
 #include <vector>
 using std::vector;
+using std::cout;
 
 vector<int> fibonacci(int x, int y, int it) {
   int temp = x;
   x = y;
   y += temp;
   it = it + 1;
-  std::cout << it << ": " << x << "\n";
+  cout << it << ": " << x << "\n";
   vector<int> result;
-  result[1] = x;
-  result[2] = y;
-  result[3] = it;
+  result.push_back(x);
+  result.push_back(y);
+  result.push_back(it);
   return result;
 }
 
