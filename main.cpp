@@ -1,26 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
+
+#define PHI ( ( 1 + pow(5, 0.5) ) / 2)
+
 using std::vector;
 using std::cout;
 
-vector<int> fibonacci(int x, int y, int it) {
-  int temp = x;
-  x = y;
-  y += temp;
-  it = it + 1;
-  cout << it << ": " << x << "\n";
-  vector<int> result;
-  result.push_back(x);
-  result.push_back(y);
-  result.push_back(it);
-  return result;
+int fibonacci(int it) {
+  float  fn = ( pow(PHI, it) - pow(-PHI, -it) ) / pow(5, 0.5);
+  cout << it << ": " << fn << "\n";
+  return 0;
 }
 
 int main() {
-  int it = 1; int x = 1; int y = 1;
-  while (it < 15) {
-    vector<int> result = fibonacci(x, y, it);
-    x = result[1]; y = result[2]; it = result[3];
-    }
+  int it = 1;
+  while (it <= 15) {
+    fibonacci(it);
+    ++it;  
+  }
   return 0;
 }
