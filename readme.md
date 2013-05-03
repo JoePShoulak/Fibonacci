@@ -1,7 +1,7 @@
 # Fibonacci #
 
 ## About ##
-Lists all the Fibonacci numbers up to and including the given index, or simply the Fibonacci number of the given index, if including the `-e` flag.<sup>1</sup>
+Lists all the Fibonacci numbers up to and including the given index, or simply the Fibonacci number of the given index, if including the `-e` flag.
 
 ## Usage ##
     $ fibonacci 5
@@ -13,5 +13,3 @@ Lists all the Fibonacci numbers up to and including the given index, or simply t
     $ fibonacci 10 -e
       // 10: 55
 
----
-1: Currently non-functional. Treats "-e" as invalid flag.
