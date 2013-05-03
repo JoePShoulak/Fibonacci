@@ -1,5 +1,17 @@
 # Fibonacci #
 
-This is a test program I made to learn the language C++.
-This program does nothing but calculate the first 15 Fibonacci numbers.
-I may, at some point, expand on this, but don't count on it.
+## About ##
+Lists all the Fibonacci numbers up to and including the given index, or simply the Fibonacci number of the given index, if including the `-e` flag.<sup>1</sup>
+
+## Usage ##
+    $ fibonacci 5
+      // 1: 1
+      // 2: 1
+      // 3: 2
+      // 4: 3
+      // 5: 5
+    $ fibonacci 10 -e
+      // 10: 55
+
+---
+1: Currently non-functional. Treats "-e" as invalid flag.
