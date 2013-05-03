@@ -41,7 +41,10 @@ int main(int argc, char* argv[])
   }
   if (argc == 2)
     if (is_number(argv[1]))
+    {
       limit = atoi(argv[1]);
+      state = INCLUSIVE;
+    }
     else
     {
       cout << "That is not a number\n" << example;
@@ -49,7 +52,7 @@ int main(int argc, char* argv[])
     }
   if (argc == 3)
   {
-    if (is_number(argv[1]) && argv[2] == "-e")
+    if (is_number(argv[1]) && strcmp(argv[2], "-e") == 0)
     {
       state = EXCLUSIVE;
       limit = atoi(argv[1]);
@@ -67,7 +70,8 @@ int main(int argc, char* argv[])
   }
   for (int it = 1; it <= limit; it++)
   {
-    fibonacci(it);
+    if (state==INCLUSIVE || it == limit)
+      fibonacci(it);
   }
   return 0;
 }
