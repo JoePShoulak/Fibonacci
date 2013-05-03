@@ -1,8 +1,12 @@
 #include <iostream> // For IO
 #include <math.h> // For exponents
+#include <string.h>
+#include <stdlib.h>
 
 // Define the folden ratio in the preprocessor
 #define PHI ( ( 1 + pow(5, 0.5) ) / 2)
+#define EXCLUSIVE 0
+#define INCLUSIVE 1
 
 using std::cout;
 using std::cin;
@@ -20,12 +24,14 @@ int fibonacci(int it)
   return 0;
 }
 
-int main()
+int state;
+
+int main(int argc, char* argv[])
 {
-  // Start at the first number
   int limit;
-  cout << "How many numbers would you like to view? ";
-  cin >> limit;
+  if (argc == 2)
+      limit = atoi(argv[1]);
+  // Start at the first number
   for (int it = 1; it <= limit; it++)
   {
     // Call the Fibonacci function
