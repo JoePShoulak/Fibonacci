@@ -1,7 +1,7 @@
-#include <iostream> // For IO
-#include <math.h> // For exponents
-#include <string.h>
-#include <stdlib.h>
+#include <iostream> // std::out
+#include <math.h>   // pow
+#include <string.h> // std::string
+#include <stdlib.h> // exit, EXIT_FAILURE
 
 // Define the folden ratio in the preprocessor
 #define PHI ( ( 1 + pow(5, 0.5) ) / 2)
@@ -9,11 +9,11 @@
 #define INCLUSIVE 1
 
 using std::cout;
-using std::cin;
+using std::string;
 
 bool is_number(const std::string& s)
 {
-    std::string::const_iterator it = s.begin();
+    string::const_iterator it = s.begin();
     while (it != s.end() && std::isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
